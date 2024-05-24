@@ -12,9 +12,7 @@ class Game:
         running: A boolean indicating whether the game is running.
         menu_options: The list of menu options.
         menu: The Menu object for handling the game menu.
-        
         font: The font used for rendering text.
-       
         state: The current state of the game (e.g., 'menu', 'game', 'guide', 'game_over').
         guide_text: A list of guide instructions for the player.
         
@@ -26,15 +24,9 @@ class Game:
         pygame.display.set_caption('Warrior Survivors')
         self.clock = pygame.time.Clock()
         self.running = True
-
         self.menu_options = ["Start", "Guide", "Exit"]
         self.menu = Menu(self.menu_options)
-
-
-
-       
         self.font = pygame.font.Font(None, 36)
-       
         self.state = 'menu'
         self.guide_text = [
             "Welcome to Survivor!",
@@ -45,9 +37,6 @@ class Game:
             "Good luck!",
             "Press ESC to quit."
         ]
-      
-
-    
     def draw_guide(self):
         """Draws the game guide on the screen."""
         self.display_surface.fill('black')
@@ -87,13 +76,8 @@ class Game:
                     if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                         self.state = 'menu'
                 self.draw_guide()
-
-            
-                    
-            
-        pygame.quit()
     
- 
+        pygame.quit()
 
 if __name__ == '__main__':
     game = Game()
