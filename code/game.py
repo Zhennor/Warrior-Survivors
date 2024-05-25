@@ -1,6 +1,6 @@
 
 from settings import *
-from ui_ux import Menu
+from UI import Menu
 
 class Game:
     """
