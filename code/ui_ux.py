@@ -1,6 +1,3 @@
-import pygame
-from os.path import join
-
 from settings import *
 
 class Menu:
